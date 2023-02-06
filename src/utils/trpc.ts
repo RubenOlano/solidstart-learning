@@ -2,6 +2,7 @@ import { QueryClient } from "@adeora/solid-query";
 import type { IAppRouter } from "~/server/trpc/router/_app";
 import { createTRPCSolidStart } from "solid-trpc";
 import { httpBatchLink } from "@trpc/client";
+import { isServer } from "solid-js/web";
 
 const getBaseUrl = () => {
   if (typeof window !== "undefined") return "";
@@ -15,8 +16,9 @@ export const trpc = createTRPCSolidStart<IAppRouter>({
         httpBatchLink({
           url: `${getBaseUrl()}/api/trpc`,
           headers: () => {
-            if (event?.request) {
+            if (event?.request && isServer) {
               const headers = event.request.headers;
+              headers.delete("connection");
               return {
                 ...headers,
                 "x-ssr": "1",
