@@ -1,8 +1,6 @@
-import { getSession } from "@auth/solid-start";
 import type { Component } from "solid-js";
 import { Show } from "solid-js";
-import { createServerData$ } from "solid-start/server";
-import { authOpts } from "~/routes/api/auth/[...solidauth]";
+import { useSession } from "~/utils/auth";
 import { trpc } from "~/utils/trpc";
 
 interface Group {
@@ -14,7 +12,8 @@ interface Group {
 }
 
 const ExploreGroupCard: Component<{ group: Group }> = (props) => {
-  const session = createSession();
+  const session = useSession();
+  const user = () => session()?.user;
   const context = trpc.useContext();
   const mutation = trpc.group.joinExploreGroup.useMutation();
 
@@ -42,7 +41,7 @@ const ExploreGroupCard: Component<{ group: Group }> = (props) => {
         <p>{props.group.description}</p>
         <div class="card-actions align-middle">
           <p class="card-subtitle">{props.group.members} members</p>
-          <Show when={session() && session()?.user}>
+          <Show when={user()}>
             <button onClick={onClick} class="btn btn-primary endi">
               Join
             </button>
@@ -54,10 +53,3 @@ const ExploreGroupCard: Component<{ group: Group }> = (props) => {
 };
 
 export default ExploreGroupCard;
-
-const createSession = () => {
-  return createServerData$(async (_, event) => {
-    const session = await getSession(event.request, authOpts);
-    return session;
-  });
-};

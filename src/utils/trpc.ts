@@ -18,7 +18,6 @@ export const trpc = createTRPCSolidStart<IAppRouter>({
           headers: () => {
             if (event?.request && isServer) {
               const headers = event.request.headers;
-              headers.delete("connection");
               return {
                 ...headers,
                 "x-ssr": "1",

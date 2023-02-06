@@ -7,6 +7,6 @@ export default defineConfig(() => {
   return {
     plugins: [solid({ ssr: true, adapter: vercel({ edge: false }) })],
     server: { port: 3000 },
-    appType: "mpa",
+    appType: "custom",
   };
 });

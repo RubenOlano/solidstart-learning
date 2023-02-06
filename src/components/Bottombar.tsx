@@ -1,10 +1,9 @@
-import { getSession } from "@auth/solid-start";
 import { signIn } from "@auth/solid-start/client";
 import { For, Switch, Match } from "solid-js";
 import { A } from "solid-start";
-import { createServerData$ } from "solid-start/server";
-import { authOpts } from "~/routes/api/auth/[...solidauth]";
+import { useSession } from "~/utils/auth";
 import { getImage } from "~/utils/defaultUserImage";
+import { trpc } from "~/utils/trpc";
 
 const routes = {
   H: "/",
@@ -13,7 +12,13 @@ const routes = {
 } as const;
 
 const BottomBar = () => {
-  const session = createSession();
+  const context = trpc.useContext();
+  const clickSignIn = async () => {
+    await context.invalidate();
+    signIn();
+  };
+  const session = useSession();
+  const user = () => session()?.user;
   return (
     <div class="btm-nav bg-gradient-to-t from-base-200 md:hidden z-10">
       <For each={Object.keys(routes)}>
@@ -32,7 +37,7 @@ const BottomBar = () => {
           <div>
             <button
               class="btn btn-primary max-w-sm text-xs font-light"
-              onClick={() => signIn()}
+              onClick={clickSignIn}
             >
               Log In
             </button>
@@ -41,8 +46,8 @@ const BottomBar = () => {
         <Match when={session()}>
           <div>
             <img
-              src={getImage(session()?.user?.image)}
-              alt={session()?.user?.name || "User"}
+              src={getImage(user()?.image)}
+              alt={user()?.name || "User"}
               class="rounded-md h-4 w-4 avatar"
             />
           </div>
@@ -50,12 +55,6 @@ const BottomBar = () => {
       </Switch>
     </div>
   );
-};
-
-const createSession = () => {
-  return createServerData$(async (_, event) => {
-    return await getSession(event.request, authOpts);
-  });
 };
 
 export default BottomBar;
