@@ -2,12 +2,12 @@
 # yarn lockfile v1
 
 
-"@adeora/solid-query@^0.12.0":
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/@adeora/solid-query/-/solid-query-0.12.0.tgz#69efb90fd53d4b425f680b7de8940aeb60b7fb16"
-  integrity sha512-aR3WASNDEzg+VRHskvqyc6jX7MsZLCvWiE3hunywy0efBuQlujcxkA+m7NfGE+u1aIUKUJtKCIhekBHbAYy3vw==
+"@adeora/solid-query@^0.16.0":
+  version "0.16.0"
+  resolved "https://registry.yarnpkg.com/@adeora/solid-query/-/solid-query-0.16.0.tgz#c0f485788eb77ef7ad1233c9efd6c872fe315304"
+  integrity sha512-ndbEzwriQO+JAbxvfnKihSYczoUdns34MCZT8WZwjcJP/iOkmSyI3WchoZGFh5RJhWdPV/k3oLYMhtnxANfl7Q==
   dependencies:
-    "@tanstack/query-core" "4.20.2"
+    "@tanstack/query-core" "https://pkg.csb.dev/TanStack/query/commit/bc5a2a16/@tanstack/query-core"
 
 "@ampproject/remapping@^2.1.0":
   version "2.2.0"
@@ -22,10 +22,10 @@
   resolved "https://registry.yarnpkg.com/@antfu/utils/-/utils-0.7.2.tgz#3bb6f37a6b188056fe9e2f363b6aa735ed65d7ca"
   integrity sha512-vy9fM3pIxZmX07dL+VX1aZe7ynZ+YyB0jY+jE6r3hOK6GNY2t6W8rzpFC4tgpbXUYABkFQwgJq2XYXlxbXAI0g==
 
-"@auth/core@^0.2.4":
-  version "0.2.5"
-  resolved "https://registry.yarnpkg.com/@auth/core/-/core-0.2.5.tgz#41fecef93a9e44370e9a00c74751dca39910d1ec"
-  integrity sha512-e9jQOW6kSnxa0gfeR5neqLIDAUvZtyGTh3YpO2eN5F/5gBybE582M5e34rXlJKj+/tAgf+oYBJAY5CUxGTY9tw==
+"@auth/core@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@auth/core/-/core-0.4.0.tgz#271e763cab2ba7f75760a601e0a62ee033e888b7"
+  integrity sha512-wHVljvVGPmKSjlxQUYZCOL4GGe26YqhT351sA2REE43YskaqRMYh1TVjBxpXcdG8/P8bw2DsHgl+aBEV3P5+KQ==
   dependencies:
     "@panva/hkdf" "^1.0.2"
     cookie "0.5.0"
@@ -1249,25 +1249,24 @@
   resolved "https://registry.yarnpkg.com/@solidjs/meta/-/meta-0.28.2.tgz#384881e96bc38278f950f8af5f5313675e6d0b8c"
   integrity sha512-avlLgBPdk4KVxzRGFlYp/MIJo8B5jVgXPgk6OUnUP8km21Z+ovO+DUd7ZPA7ejv8PBdWi9GE3zCzw8RU2YuV2Q==
 
-"@solidjs/router@^0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@solidjs/router/-/router-0.6.0.tgz#27583cd0aa81a99482e0e7eddae5e214bd8bf6b6"
-  integrity sha512-7ug2fzXXhvvDBL4CQyMvMM9o3dgBE6PoRh38T8UTmMnYz4rcCfROqSZc9yq+YEC96qWt5OvJgZ1Uj/4EAQXlfA==
+"@solidjs/router@^0.7.0":
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/@solidjs/router/-/router-0.7.0.tgz#5f8f1289caf4a1eb24e57cbe93e6dde639b04a6e"
+  integrity sha512-8HI84twe5FjYRebSLMAhtkL9bRuTDIlxJK56kjfjU9WKGoUCTaWpCnkuj8Hqde1bWZ0X+GOZxKDfNkn1CjtjxA==
 
-"@tanstack/query-core@4.20.2":
-  version "4.20.2"
-  resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-4.20.2.tgz#147f7dc7eecd0e21fea4926c0dd16163a8170ef9"
-  integrity sha512-50tydwMY+fZuSPHiW+mdMQHSgjR9+3xXDoLBPt1tJWyF0mZDjMetlBxLWNaFb/Aid/ml0ZE5nRUW7CZCtwzpHQ==
+"@tanstack/query-core@https://pkg.csb.dev/TanStack/query/commit/bc5a2a16/@tanstack/query-core":
+  version "4.24.3"
+  resolved "https://pkg.csb.dev/TanStack/query/commit/bc5a2a16/@tanstack/query-core#9e8814d769f5caf52cd406e115b7e2f875e4bed2"
 
-"@trpc/client@^10.1.0":
-  version "10.9.1"
-  resolved "https://registry.yarnpkg.com/@trpc/client/-/client-10.9.1.tgz#324298dc8f7140d841ed5c54e1da3c0c4dc5fd95"
-  integrity sha512-9ma44dFU40KHIEaMdyjRJd9LloFyZZXeAbZJTi2+XK/5sj64FRqqef3fWTj2dBc7A09pk8gls4Tqa3tNC98jSg==
+"@trpc/client@^10.10.0":
+  version "10.10.0"
+  resolved "https://registry.yarnpkg.com/@trpc/client/-/client-10.10.0.tgz#5abdbf399639f2fdfe605682d2cdf3f9dba87cb1"
+  integrity sha512-HRVGkOsR4FIYpyQILP84HLbj6pRnLKgxy4AIelTf9d9TxD60M5bNhbR2Uz3hqNSb9a2ppaRJBLv7twlV9b4qHQ==
 
-"@trpc/server@^10.1.0":
-  version "10.9.1"
-  resolved "https://registry.yarnpkg.com/@trpc/server/-/server-10.9.1.tgz#5356e148f30f8328542523dca512fc7e75224fd9"
-  integrity sha512-cUbj8KphlH0IHuoVUhkZrN1E+FdfRpagglqhblyj8VPJKkjzTjb6D8MYHlXhiX7Tdmtwy2w0ev39HBkzlM0thg==
+"@trpc/server@^10.10.0":
+  version "10.10.0"
+  resolved "https://registry.yarnpkg.com/@trpc/server/-/server-10.10.0.tgz#0b494335140d4fd5e1452f7b57dcc9b8886720a4"
+  integrity sha512-tCTqcqBT+3nebYFTHtwM877qo5xQPtVlptxKdUzMVWleWT4lFTL4oddk45qVURToci2iMbVJjd4jQU9y9/XwlQ==
 
 "@types/cookie@^0.5.1":
   version "0.5.1"
@@ -1882,7 +1881,7 @@ csstype@^3.1.0:
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.1.1.tgz#841b532c45c758ee546a11d5bd7b7b473c8c30b9"
   integrity sha512-DJR/VvkAvSZW9bTouZue2sSxDwdTN92uHjqeKVm+0dAqdfNykRzQ95tay8aXMBAAPpUiq4Qcug2L7neoRh2Egw==
 
-daisyui@^2.47.0:
+daisyui@^2.50.0:
   version "2.50.0"
   resolved "https://registry.yarnpkg.com/daisyui/-/daisyui-2.50.0.tgz#4a7916596b686f1713ac622b629b6bfba2986d1d"
   integrity sha512-KiqRvqMXi9rgoH84M8D69gXPg6x+cbdiaHqm8pFHOsXXN1rTl/+OcCKkSnkEwTtIge9VJVDGU6l4B8/n+Juc5g==
@@ -2353,10 +2352,10 @@ escape-string-regexp@^4.0.0:
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz#14ba83a5d373e3d311e5afca29cf5bfad965bf34"
   integrity sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==
 
-eslint-plugin-solid@^0.8.0:
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-solid/-/eslint-plugin-solid-0.8.0.tgz#4f271546c4362a9f2334e3b0f16c3e5f6e4e0da8"
-  integrity sha512-yzTpqZ4+qGO14aM2rii9waonMNqSlpXHID2GMREYCOWpbIrkC5gILXpLl/+ZWFHSJDvsQN+/COobBkqizn7pkw==
+eslint-plugin-solid@^0.9.4:
+  version "0.9.4"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-solid/-/eslint-plugin-solid-0.9.4.tgz#1460721b805879f9ddf9778866d2a1dd382ae2f9"
+  integrity sha512-AGS7XnkepV2jiFwBMSg3FW7GKe6uJwgx65nnRC7I6s0dbV7rGpouwj9KDkXV5NJHQENxACeOLUTgjyMi3JeHNw==
   dependencies:
     "@typescript-eslint/utils" "^5.30.7"
     is-html "^2.0.0"
@@ -3915,7 +3914,7 @@ slash@^3.0.0:
   resolved "https://registry.yarnpkg.com/slash/-/slash-3.0.0.tgz#6539be870c165adbd5240220dbe361f1bc4d4634"
   integrity sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==
 
-solid-js@^1.5.7:
+solid-js@^1.6.10:
   version "1.6.10"
   resolved "https://registry.yarnpkg.com/solid-js/-/solid-js-1.6.10.tgz#fbd8e0a4adfe7b38da1885170369ede6a1cc7379"
   integrity sha512-Sf0e6PQCEFkFtbPq0L+93Ua81YQOefBEbvDJ0YXT92b6Lzw0k7UvzSd2l1BbYM+yzE3UmepU1tyMDc/3nIByjA==
@@ -3964,7 +3963,7 @@ solid-start-vercel@^0.2.15:
     rollup "^3.10.0"
     terser "^5.16.1"
 
-solid-start@^0.2.15:
+solid-start@^0.2.19:
   version "0.2.19"
   resolved "https://registry.yarnpkg.com/solid-start/-/solid-start-0.2.19.tgz#cfef71be3d3828337b78122af1d3ae5f91d49689"
   integrity sha512-cn4zEiNwKOcfFqtLEmjeOZj4CmgsYoyRvzB9d563cAyCKFk5ms99X0H81VcDv1zpsjAEOuNcnKJXcdczczLw+A==
@@ -4001,10 +4000,10 @@ solid-start@^0.2.15:
     vite-plugin-solid "^2.5.0"
     wait-on "^6.0.1"
 
-solid-trpc@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/solid-trpc/-/solid-trpc-0.1.0.tgz#fdfb251c72976c48bea706fb32d21cfe96f33f16"
-  integrity sha512-NuWexC27yt9z332HR0O+gjTCSZRrzpDYgTQMLME58RpBlWWcqToTf1lRq+0GdCxIdcwi6aagkBXIBhuvgw1nsw==
+solid-trpc@^0.1.0-sssr.6:
+  version "0.1.0-sssr.6"
+  resolved "https://registry.yarnpkg.com/solid-trpc/-/solid-trpc-0.1.0-sssr.6.tgz#49be11275103b121a705758f805edb292aedb687"
+  integrity sha512-cnuRn9MEcyoKOrw59pEe6Xz+dwCqNzph5if4xMo/+++C5odfg2KXCMDy/++GIGZEVMh3/yu0V73Ri6AWvhZESg==
 
 source-map-js@^1.0.2:
   version "1.0.2"
